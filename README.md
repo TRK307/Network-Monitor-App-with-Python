@@ -49,14 +49,23 @@ pip install Flask
 
 ##🖥 Deployment
 
+Create Network_Monitor.py
+
+```
+nano Network Monitor.py
+```
+Paste the contents of Network Monitor.py then save
+```
+CTRL + O > ENTER > CTRL + X
+```
+
 Open test_router.py and update the ROUTER_IP and INTERFACE constants to match your network.
 
 Run the application:
 ```
-
-    python test_router.py
-
-    Access the dashboard at http://<your-server-ip>:5000.
+#Ensure the python VENV is running, since its hosting the App
+python test_router.py
+Access the dashboard at http://<your-server-ip>:5000.
 ```
 
 ##📂 Project Structure
