@@ -39,10 +39,6 @@ ssh-copy-id root@your.router.ip
 It is recommended to host this app in a dedicated virtual environment.
 Bash
 ```
-# Clone the repository
-git clone https://github.com/yourusername/network-monitor-dashboard.git
-cd network-monitor-dashboard
-
 # Create and activate the virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: .\venv\Scripts\activate
