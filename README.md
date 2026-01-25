@@ -128,10 +128,10 @@ Replace `<monitoring-machine-ip>` with the IP address of the computer running th
 
 ```
 Network-Monitor-App-with-Python/
-├── Network Monitor.py     # Main Flask application and telemetry engine
 ├── Dashboard.png          # Screenshot of the dashboard
-├── README.md              # This file
-└── LICENSE                # GNU GPL v3.0 license
+├── LICENSE                # GNU GPL v3.0 license
+├── Network Monitor.py     # Main Flask application and telemetry engine
+└── README.md              # This file 
 ```
 
 ## 🔧 Troubleshooting
