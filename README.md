@@ -30,7 +30,6 @@ opkg install iftop ethtool
 
 The dashboard requires passwordless SSH access to the router. Generate an SSH key on your hosting machine and copy it to the router:
 ```
-
 ssh-keygen -t rsa
 ssh-copy-id root@your.router.ip
 ```
@@ -80,6 +79,8 @@ Access the dashboard at http://<your-server-ip>:5000.
 
 
 ##Distributed under the GNU General Public License v3.0. This ensures the project remains open-source and respects the user's right to modify their own hardware telemetry. See LICENSE for more information.
+
+
 🤝 Acknowledgments
 
   OpenWrt for the incredible router firmware.
