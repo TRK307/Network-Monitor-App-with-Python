@@ -32,7 +32,7 @@ The dashboard requires passwordless SSH access to the router. Generate an SSH ke
 ```
 
 ssh-keygen -t rsa
-ssh-copy-id root@10.0.0.1
+ssh-copy-id root@your.router.ip
 ```
 3. Python Environment (venv)
 
