@@ -60,12 +60,9 @@ exit
 cat ~/.ssh/id_rsa.pub | ssh root@192.168.1.1 "cat >> /etc/dropbear/authorized_keys"
 ```
 
-### Step 3: Clone and Set Up the Application
+### Step 3: Set Up the Application
 
 ```bash
-# Clone the repository
-git clone https://github.com/TRK307/Network-Monitor-App-with-Python.git
-cd Network-Monitor-App-with-Python
 
 # Create a Python virtual environment
 python3 -m venv venv
