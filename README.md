@@ -4,7 +4,7 @@ A real-time, low-latency telemetry dashboard designed for homelab enthusiasts us
 
 ![Dashboard Preview](Dashboard.png)
 
-## 🚀 Key Features
+## Key Features
 
 - **Dynamic Throughput**: Real-time Mbps calculation for WAN traffic
 - **Semantic Coloring**: Muted color-coding for Latency (Good/Warn/Bad) and Service Tags
@@ -12,7 +12,7 @@ A real-time, low-latency telemetry dashboard designed for homelab enthusiasts us
 - **Service Intelligence**: Identifies specific traffic types such as HTTPS, SSH, and Speedtests
 - **System Health**: Monitors router CPU load and hardware link speeds
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have:
 
@@ -21,7 +21,7 @@ Before you begin, ensure you have:
 - **Network connectivity** between your monitoring machine and router
 - **Basic command-line knowledge** for SSH and Python
 
-## 🛠 Installation Guide
+## Installation Guide
 
 ### Step 1: Router Setup
 
@@ -124,7 +124,7 @@ Open your web browser and navigate to:
 
 Replace `<monitoring-machine-ip>` with the IP address of the computer running the Python application (not your router's IP).
 
-## 📂 Project Structure
+## Structure
 
 ```
 Network-Monitor-App-with-Python/
@@ -134,98 +134,3 @@ Network-Monitor-App-with-Python/
 └── README.md              # This file 
 ```
 
-## 🔧 Troubleshooting
-
-### SSH Connection Issues
-
-**Problem**: Application can't connect to router via SSH
-
-**Solutions**:
-- Verify passwordless SSH works: `ssh root@192.168.1.1` (should not ask for password)
-- Ensure the router IP in `Network Monitor.py` matches your router's actual IP
-- Check that SSH is enabled on your router: `uci show dropbear`
-- Verify firewall rules allow SSH from your monitoring machine
-
-### Permission Denied Errors
-
-**Problem**: SSH authentication fails
-
-**Solutions**:
-- Confirm your SSH key was copied correctly: `ssh root@192.168.1.1 cat /etc/dropbear/authorized_keys`
-- Check SSH key file permissions: `chmod 600 ~/.ssh/id_rsa`
-- Try re-running `ssh-copy-id root@192.168.1.1`
-
-### Missing Packages on Router
-
-**Problem**: Commands like `iftop` or `ethtool` not found
-
-**Solutions**:
-- SSH into router and verify installation: `opkg list-installed | grep -E 'iftop|ethtool'`
-- Reinstall if needed: `opkg update && opkg install iftop ethtool`
-- Ensure sufficient storage space on router: `df -h`
-
-### Wrong Interface Name
-
-**Problem**: No data showing or incorrect throughput values
-
-**Solutions**:
-- SSH into router and list interfaces: `ip link show` or `ifconfig`
-- Common WAN interface names: `eth1`, `eth0.2`, `wan`, `pppoe-wan`, `wwan0`
-- Update `INTERFACE` constant in `Network Monitor.py` to match your actual WAN interface
-
-### Dashboard Won't Load
-
-**Problem**: Can't access `http://localhost:5000`
-
-**Solutions**:
-- Verify Flask is running without errors in the terminal
-- Check if port 5000 is already in use: `lsof -i :5000` (Linux/macOS) or `netstat -ano | findstr :5000` (Windows)
-- Try accessing via IP instead of localhost: `http://127.0.0.1:5000`
-- Check firewall settings on your monitoring machine
-
-### Python Module Not Found
-
-**Problem**: `ModuleNotFoundError` when running the application
-
-**Solutions**:
-- Ensure virtual environment is activated (you should see `(venv)` in your terminal prompt)
-- Reinstall dependencies: `pip install Flask paramiko`
-- Verify you're using the correct Python version: `python --version` (should be 3.7+)
-
-## 🔒 Security Considerations
-
-- This application requires SSH access with root privileges to your router
-- SSH keys provide secure, passwordless authentication
-- The dashboard runs on your local network and should not be exposed to the internet without additional security measures
-- Consider using a firewall to restrict access to port 5000 if running on a shared network
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- Report bugs or issues
-- Suggest new features or improvements
-- Submit pull requests
-
-## ⚖️ License
-
-This project is distributed under the GNU General Public License v3.0. This ensures the project remains open-source and respects the user's right to modify their own hardware telemetry. See [LICENSE](LICENSE) for more information.
-
-## 🙏 Acknowledgments
-
-- [OpenWrt](https://openwrt.org/) for the incredible router firmware
-- [Flask](https://flask.palletsprojects.com/) for the lightweight web framework
-- [Outfit Font](https://fonts.google.com/specimen/Outfit) by Google Fonts for the modern aesthetic
-- The homelab community for inspiration and support
-
-## 📞 Support
-
-If you encounter issues not covered in the troubleshooting section:
-
-1. Check existing [GitHub Issues](https://github.com/TRK307/Network-Monitor-App-with-Python/issues)
-2. Create a new issue with detailed information about your setup and the problem
-3. Include relevant log output and error messages
-
----
-
-**Note**: This is a homelab project designed for personal use. Performance and compatibility may vary based on your specific router model and network configuration.
