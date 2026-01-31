@@ -10,7 +10,7 @@ A real-time, low-latency telemetry dashboard designed for homelab enthusiasts us
  - Added router RAM usage indicator
  - Added router CPU temp display (still troubleshooting to get it to work)
 
-![Dashboard Preview](Dashboard.png) 
+![Dashboard Preview](Dashboard.png)
 ![Dashboard Preview](Dashboardd.png)
 ![Dashboard Preview](Dashboarddd.png) 
 
