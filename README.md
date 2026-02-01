@@ -16,6 +16,7 @@ A real-time, low-latency telemetry dashboard designed for homelab enthusiasts us
 ![Dashboard Preview](Dashboardd.png)
 
 
+
 ## Key Features
 
 - **Dynamic Throughput**: Real-time Mbps calculation for WAN traffic
