@@ -2,17 +2,19 @@
 
 A real-time, low-latency telemetry dashboard designed for homelab enthusiasts using OpenWrt routers. This application pulls live metrics directly from your router via SSH and visualizes them through a professional, desaturated "Calm Dark" web interface.
 
-*Updated 31/01/2026
+*Updated 01/02/2026
  - new look - dracula VS Code colours used
  - Added a debugging log console
  - fixed Connected Devices to reflect connection type (LAN/WIFI) and to show 2.4Ghz or 5Ghz connection
  - Speed throughput now shows Download and Upload speeds and Total throughput in Mbps
  - Added router RAM usage indicator
  - Added router CPU temp display (still troubleshooting to get it to work)
+ - Added button to flush DHCP leases and do a Soft Reboot
+ - Fixed Debug Console to show queries and their status
 
 ![Dashboard Preview](Dashboard.png)
 ![Dashboard Preview](Dashboardd.png)
-![Dashboard Preview](Dashboarddd.png) 
+
 
 ## Key Features
 
